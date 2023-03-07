@@ -1,0 +1,10 @@
+[Unit]
+Description=Send latest screenshot made in Steam through KDE Connect
+
+[Service]
+Type=oneshot
+ExecStart=%h/autoscreenshot/receive.sh
+WorkingDirectory=%h/autoscreenshot
+
+[Install]
+WantedBy=default.target
