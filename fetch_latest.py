@@ -1,6 +1,7 @@
 import os
-import shutil
 import vdf
+import steamstuff
+
 no_transfer = False
 try:
     import transfer_handler
@@ -8,27 +9,10 @@ except:
     print("no transfer script")
     no_transfer = True
 
-isDeck = True
+isDeck = steamstuff.isDeck
+steamdir = steamstuff.steamdir
 
-if isDeck:
-    steamdir = os.getenv("HOME") + "/.local/share/Steam/"
-else:
-    steamdir = "C:/Program Files (x86)/Steam/"
-
-# get the current steam user's AccountID
-d = vdf.parse(open("{0}config/loginusers.vdf".format(steamdir), encoding="utf-8"))
-users = d['users']
-for id64 in users:
-    if users[id64]["MostRecent"] == "1":
-        user = int(id64)
-
-print("MostRecent: {0}".format(users[str(user)]['PersonaName']))
-print("SteamID: {0}".format(user))
-print("AccountID: {0}".format(user & 0xFFFFFFFF))
-
-# curdir = os.getcwd()
-# dir = "{0}userdata/{1}/760".format(steamdir, user & 0xFFFFFFFF)
-# os.chdir(dir)
+user = steamstuff.GetAccountId()
 
 # open and parse the screenshots.vdf file
 d = vdf.parse(open("{0}userdata/{1}/760/screenshots.vdf".format(steamdir, user & 0xFFFFFFFF)))
