@@ -1,5 +1,6 @@
 # deck-screenshot-sync
 auto-upload screenshots made from the deck onto your pc or phone or idk!!
+## _As seen on [reddit](https://www.reddit.com/r/SteamDeck/comments/11kqc95/i_made_a_script_to_auto_upload_steam_screenshots/)!!_
 
 # WIP
 the script is as WIP as this readme
