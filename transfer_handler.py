@@ -5,5 +5,9 @@ import subprocess
 device_name = 'snusk'
 
 def transfer(filename):
+    # wake up kdeconnect
+    subprocess.call(['kdeconnect-cli', '-l'])
+
+    # SEND IT
     print("sending {0} thru kdeconnect-cli".format(filename))
     subprocess.call(['kdeconnect-cli', '--share', filename, '-n', device_name])
