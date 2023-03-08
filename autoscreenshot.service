@@ -3,7 +3,7 @@ Description=Send latest screenshot made in Steam through KDE Connect
 
 [Service]
 Type=oneshot
-ExecStart=usr/bin/env python3 fetch_latest.py
+ExecStart=/usr/bin/env python3 fetch_latest.py
 WorkingDirectory=%h/autoscreenshot
 
 [Install]
