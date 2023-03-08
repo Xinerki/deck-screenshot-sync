@@ -7,3 +7,5 @@ with open("autoscreenshot.path", 'w') as f:
 PathModified=%h/.local/share/Steam/userdata/{}/760/screenshots.vdf
 Unit=autoscreenshot.service
     """.format(steamstuff.GetAccountId()))
+
+print("Successfully generated autoscreenshot.path (probably)")

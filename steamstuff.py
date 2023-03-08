@@ -1,7 +1,8 @@
 import os
 import vdf
 
-isDeck = True
+# genius!!
+isDeck = os.getenv("USER") == 'deck'
 
 if isDeck:
     steamdir = os.getenv("HOME") + "/.local/share/Steam/"

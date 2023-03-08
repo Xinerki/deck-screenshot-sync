@@ -6,10 +6,10 @@ the script is as WIP as this readme
 
 # Installation
 barebones guide
+
+the install.sh should do most of the work, still writing a full guide
+
 ```bash
-cp autoscreenshot.service ~/.config/systemd/user/autoscreenshot.service
-cp autoscreenshot.path ~/.config/systemd/user/autoscreenshot.path
-systemctl --user daemon-reload
-kdeconnect-cli -l
-systemctl --user enable --now autoscreenshot.path
+chmod +x install.sh
+./install.sh
 ```
