@@ -1,13 +1,16 @@
+import platform
 import os
 import vdf
 
-# genius!!
-isDeck = os.getenv("USER") == 'deck'
+# 'Linux', 'Darwin', 'Java', 'Windows'
+operating_system = platform.system()
 
-if isDeck:
+if operating_system == ("Linux" or "Darwin"):
     steamdir = os.getenv("HOME") + "/.local/share/Steam/"
-else:
+elif operating_system == "Windows":
     steamdir = "C:/Program Files (x86)/Steam/"
+else:
+    sys.exit(f"Cannot handle operating system: {operating_system}")
 
 # get the current steam user's SteamID
 def GetSteamId():
