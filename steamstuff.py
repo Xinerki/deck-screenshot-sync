@@ -1,6 +1,7 @@
 import platform
 import os
 import vdf
+import sys
 
 # 'Linux', 'Darwin', 'Java', 'Windows'
 operating_system = platform.system()
