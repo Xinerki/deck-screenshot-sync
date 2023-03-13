@@ -1,0 +1,9 @@
+[Unit]
+Description=Connect your computer to your smartphone or tablet. Also see kdeconnect-cli.
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/usr/lib/kdeconnectd
+ExecStop=/usr/bin/kquitapp5 kdeconnectd
+BusName=org.kde.kdeconnect
+
