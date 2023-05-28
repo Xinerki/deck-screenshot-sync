@@ -9,7 +9,6 @@ except:
     print("no transfer script")
     no_transfer = True
 
-isDeck = steamstuff.isDeck
 steamdir = steamstuff.steamdir
 
 user = steamstuff.GetAccountId()
